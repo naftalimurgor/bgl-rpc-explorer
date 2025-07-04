@@ -1,4 +1,4 @@
-$body-bg: #1a2433;
+$body-bg: #190F7B;
 $body-color: #f7fafa;
 
 $main-bg: darken($body-bg, 4%);
@@ -60,7 +60,7 @@ $btn-close-color: #fff;
 
 $tooltip-opacity: 1.0;
 
-$dropdown-bg: lighten($body-bg, 10%);
+$dropdown-bg: lighten(#37219D, 10%);
 $dropdown-link-color: $body-color;
 $dropdown-link-hover-bg: lighten($dropdown-bg, 10%);
 $dropdown-link-hover-color: $body-color;
@@ -165,7 +165,7 @@ $nav-tabs-border-color: $body-color;
 }
 
 
-$header-footer-bg: #112138;
+$header-footer-bg: #37219D;
 
 .bg-header-footer {
 	background-color: $header-footer-bg !important;
