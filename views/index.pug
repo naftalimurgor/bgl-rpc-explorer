@@ -1,7 +1,7 @@
 extends layout
 
 block headContent
-	title Bitcoin Explorer
+	title Bitgesell Explorer
 	
 block content
 
@@ -38,26 +38,26 @@ block content
 				li
 					p
 						b If you just started your node, it may still be initializing.
-						div At startup, bitcoind verifies its block index before making itself available to serve data. The amount of time the verification process takes depends largely on the speed of the machine bitcoind is running on. If you're running bitcoind on low powered, inexpensive hardware, don't be surprised if this process takes a long time.
+						div At startup, BGLd verifies its block index before making itself available to serve data. The amount of time the verification process takes depends largely on the speed of the machine bitcoind is running on. If you're running bitcoind on low powered, inexpensive hardware, don't be surprised if this process takes a long time.
 				li
 					p
-						b If you believe your bitcoind node is already initialized...
+						b If you believe your BGLd node is already initialized...
 						div Check your RPC connection info and/or check this application's error log for possible hints about the cause of this issue.
 	else
 
 		+dismissableAlert("homepageWelcomeBannerDismissed")
-			h5 Bitcoin Explorer
+			h5 Bitgesell Explorer
 				span.fw-light :
 					span.fst-italic.ms-1 The free, open-source, easy-to-setup, easy-to-use, self-hosted explorer
 			
 
-			span.fw-light Protect your privacy while enjoying the conveniences of public explorers. Made for Bitcoiners by Bitcoiners. Enjoy!
+			span.fw-light Protect your privacy while enjoying the conveniences of public explorers. Made by Bitgesell community. Enjoy!
 
 			hr
 
 			.mt-2
 				if (global.sourcecodeProjectMetadata)
-					a.btn.btn-sm.btn-primary.mb-2.mb-md-1.me-3(href="https://github.com/janoside/btc-rpc-explorer", title="View source code", data-bs-toggle="tooltip", data-bs-placement="bottom")
+					a.btn.btn-sm.btn-primary.mb-2.mb-md-1.me-3(href="https://github.com/naftalimurgor/bgl-rpc-explorer", title="View source code", data-bs-toggle="tooltip", data-bs-placement="bottom")
 						i.bi-git.fs-6.text-white.me-2
 						| View Source
 
@@ -65,9 +65,9 @@ block content
 					i.bi-heart-fill.fs-6.text-danger.me-2
 					| Donate
 					
-				a.btn.btn-sm.btn-primary.mb-2.mb-md-1.me-3(href="https://twitter.com/BitcoinExplorer", target="_blank", title="Follow @BitcoinExplorer on Twitter", data-bs-toggle="tooltip", data-bs-placement="bottom")
+				a.btn.btn-sm.btn-primary.mb-2.mb-md-1.me-3(href="https://twitter.com/nkmurgor", target="_blank", title="Follow @nmurgor on Twitter", data-bs-toggle="tooltip", data-bs-placement="bottom")
 					i.bi-twitter.fs-6.text-twitter.me-2
-					| @BitcoinExplorer
+					| @nkmurgor
 
 		
 		if (global.activeBlockchain == "main")

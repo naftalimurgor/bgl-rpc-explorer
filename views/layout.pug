@@ -61,12 +61,12 @@ html(lang="en")
 						if (coinConfig.logoUrlsByNetwork && coinConfig.logoUrlsByNetwork[activeBlockchain])
 							img.header-image(src=assetUrl(coinConfig.logoUrlsByNetwork[activeBlockchain]), alt="logo")
 						else
-							img.header-image(src=assetUrl("./img/network-mainnet/logo.svg"), alt="logo")
+							img.header-image(src=assetUrl("./img/network-mainnet/logo.png"), alt="logo")
 
 						if (coinConfig.siteTitlesByNetwork && coinConfig.siteTitlesByNetwork[activeBlockchain])
 							span.fw-light #{coinConfig.siteTitlesByNetwork[activeBlockchain]}
 						else
-							span.fw-light Bitcoin Explorer
+							span.fw-light Bitgesell Explorer
 
 				if (false && config.demoSite)
 					- var networkNameMap = {"main": "Mainnet", "test": "Testnet", "signet": "Signet"};
@@ -136,7 +136,7 @@ html(lang="en")
 								.dropdown-menu.dropdown-menu-end.shadow(aria-labelledby="navbarDropdown")
 									span.dropdown-header Display Currency
 
-									- var items = ["BTC", "sat"];
+									- var items = ["BGL", "sat"];
 									if (config.queryExchangeRates && global.exchangeRates)
 										- items.push("local");
 
