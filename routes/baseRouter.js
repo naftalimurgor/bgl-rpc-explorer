@@ -1101,7 +1101,7 @@ router.get("/block-height/:blockHeight", asyncHandler(async (req, res, next) => 
 				res.locals.metaDesc = "";
 			}
 		} else {
-			res.locals.metaTitle = `Bitcoin Block #${blockHeight.toLocaleString()}`;
+			res.locals.metaTitle = `Bitgesell Block #${blockHeight.toLocaleString()}`;
 			res.locals.metaDesc = "";
 		}
 		
@@ -1203,7 +1203,7 @@ router.get("/block/:blockHash", asyncHandler(async (req, res, next) => {
 			}
 
 		} else {
-			res.locals.metaTitle = `Bitcoin Block ${utils.ellipsizeMiddle(res.locals.result.getblock.hash, 16)}`;
+			res.locals.metaTitle = `Bitgesell Block ${utils.ellipsizeMiddle(res.locals.result.getblock.hash, 16)}`;
 			res.locals.metaDesc = "";
 		}
 
@@ -1449,7 +1449,7 @@ router.get("/tx/:transactionId", asyncHandler(async (req, res, next) => {
 				res.locals.metaDesc = "";
 			}
 		} else {
-			res.locals.metaTitle = `Bitcoin Transaction ${utils.ellipsizeMiddle(txid, 16)}`;
+			res.locals.metaTitle = `Bitgesell Transaction ${utils.ellipsizeMiddle(txid, 16)}`;
 			res.locals.metaDesc = "";
 		}
 
@@ -1522,7 +1522,7 @@ router.get("/address/:address", asyncHandler(async (req, res, next) => {
 		}
 
 
-		res.locals.metaTitle = `Bitcoin Address ${address}`;
+		res.locals.metaTitle = `Bitgesell Address ${address}`;
 
 		res.locals.address = address;
 		res.locals.limit = limit;

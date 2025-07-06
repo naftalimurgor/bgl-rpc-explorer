@@ -21,8 +21,8 @@ const debugPerfLog = debug("btcexp:actionPerformace");
 const debugAccessLog = debug("btcexp:access");
 
 const configPaths = [
-	path.join(os.homedir(), ".config", "btc-rpc-explorer.env"),
-	path.join("/etc", "btc-rpc-explorer", ".env"),
+	path.join(os.homedir(), ".config", "bgl-rpc-explorer.env"),
+	path.join("/etc", "bgl-rpc-explorer", ".env"),
 	path.join(process.cwd(), ".env"),
 ];
 
@@ -317,7 +317,7 @@ const cdnItems = [
 	[`js/sentry.min.js`, `text/javascript`, "utf8"],
 	[`js/decimal.js`, `text/javascript`, "utf8"],
 
-	[`img/network-mainnet/logo.svg`, `image/svg+xml`, "utf8"],
+	[`img/network-mainnet/logo.png`, `image/png`, "binary"],
 	[`img/network-mainnet/coin-icon.svg`, `image/svg+xml`, "utf8"],
 	[`img/network-mainnet/apple-touch-icon.png`, `image/png`, "binary"],
 	[`img/network-mainnet/favicon-16x16.png`, `image/png`, "binary"],
