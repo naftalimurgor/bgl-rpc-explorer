@@ -4,16 +4,6 @@
 
 ## Self-Hosted Bitgesell explorer for everyone running [Bitgesell Core](https://github.com/BitgesellOfficial/bitgesell).
 
-[![npm version][npm-ver-img]][npm-ver-url] [![NPM downloads][npm-dl-alltime-img]][npm-dl-url]
-
-
----
-
-
-![homepage](./public/img/screenshots/homepage.png)
-
-
-
 This is a self-hosted explorer for the Bitgesell blockchain, driven by RPC calls to your own [Bitgesell](https://github.com/Bitgesell/Bitgesell) node. It is easy to run and can be connected to other tools (like Electrum servers) to achieve a full-featured explorer.
 
 Whatever reasons you may have for running a full node (trustlessness, technical curiosity, supporting the network, etc) it's valuable to appreciate the *fullness* of your node. With this explorer, you can explore not just the blockchain database, but also explore all of the functional capabilities of your own node.
