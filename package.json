@@ -1,11 +1,12 @@
 {
-	"name": "btc-rpc-explorer",
+	"name": "bgl-rpc-explorer",
 	"version": "3.5.1",
-	"description": "Open-source, self-hosted Bitcoin explorer",
+	"description": "Open-source, self-hosted Bitgesell explorer",
 	"private": false,
 	"bin": "bin/cli.js",
 	"scripts": {
 		"start": "node ./bin/www",
+		"dev": "nodemon ./bin/www",
 		"test": "node ./bin/test.js",
 		"miners": "node ./bin/refresh-mining-pool-configs.js",
 		"integrity": "node ./bin/frontend-resource-integrity.js",
@@ -20,15 +21,16 @@
 		"css": "npm run css-light && npm run css-dark && npm run css-dark-v1 && npm run integrity"
 	},
 	"keywords": [
-		"bitcoin",
+		"Bitgesell",
 		"btc",
+		"bgl",
 		"blockchain"
 	],
 	"author": "Dan Janosik <dan@47.io>",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/janoside/btc-rpc-explorer.git"
+		"url": "git+https://github.com/naftalimurgor/bgl-rpc-explorer.git"
 	},
 	"dependencies": {
 		"@janoside/app-utils": "github:janoside/app-utils#ba4c23d3f",
@@ -79,6 +81,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^8.39.0",
+		"nodemon": "^3.1.10",
 		"sass": "^1.81.0"
 	}
 }

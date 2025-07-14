@@ -108,7 +108,7 @@ html(lang="en")
 											a.dropdown-item(href=coinConfig.demoSiteUrlsByNetwork[demoSite])
 												img.align-text-top.me-2(src=assetUrl(coinConfig.coinIconUrlsByNetwork[demoSite]), style="width: 20px;")
 												
-												| #{coinConfig.siteTitlesByNetwork[demoSite].replace("Explorer", "").replace("Bitcoin", "Mainnet")}
+												| #{coinConfig.siteTitlesByNetwork[demoSite].replace("Explorer", "").replace("Bitgesell", "Mainnet")}
 
 							if (config.siteTools)
 								li.nav-item.dropdown.me-0.me-md-2.mt-2.mt-md-0.text-center.text-md-start
@@ -136,7 +136,7 @@ html(lang="en")
 								.dropdown-menu.dropdown-menu-end.shadow(aria-labelledby="navbarDropdown")
 									span.dropdown-header Display Currency
 
-									- var items = ["BGL", "sat"];
+									- var items = ["sat", "BGL"];
 									if (config.queryExchangeRates && global.exchangeRates)
 										- items.push("local");
 
@@ -198,9 +198,6 @@ html(lang="en")
 
 									hr.dropdown-divider.mt-2.mb-2
 
-									a.dropdown-item(href=`./user-settings`) More settings...
-									a.dropdown-item(href=`./admin/dashboard`) Admin Dashboard
-
 
 							
 
@@ -250,7 +247,7 @@ html(lang="en")
 			.container
 				if (!crawlerBot && global.rpcConnected)
 					.mb-4.mx-6
-						iframe(id="quoteIframe", title="A Bitcoin Quote of the Day", src="./snippet/quote/random", onload="iframeLoaded('quoteIframe');", scrolling="no", height="0", style="width: 100%;")
+						//iframe(id="quoteIframe", title="A Bitcoin Quote of the Day", src="./snippet/quote/random", onload="iframeLoaded('quoteIframe');", scrolling="no", height="0", style="width: 100%;")
 
 					hr
 
