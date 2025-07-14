@@ -11,9 +11,8 @@
 * See raw JSON content from BGLd used to generate most pages
 * Search by transaction ID, block hash/height, and address
 * Optional transaction history for addresses by querying from Bitgesell API
-* Mempool summary, with fee, size, and age breakdowns
-* RPC command browser and terminal
 
+* ![homepage](./public/img/preview.png)
 
 # Changelog / Release notes
 
