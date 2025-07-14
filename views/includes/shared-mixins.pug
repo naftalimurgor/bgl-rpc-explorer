@@ -361,7 +361,7 @@ mixin pageTab(name, defaultActive=false)
 
 mixin valueDisplay(val, options={})
 	if (val > 0)
-		if (userSettings.displayCurrency == "btc")
+		if (userSettings.displayCurrency == "bgl")
 			+_valueDisplayBtc(val, options)
 
 		else if (userSettings.displayCurrency == "sat")

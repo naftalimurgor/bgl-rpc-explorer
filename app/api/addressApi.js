@@ -9,6 +9,7 @@ const blockchainAddressApi = require("./blockchainAddressApi.js");
 const blockchairAddressApi = require("./blockchairAddressApi.js");
 const blockcypherAddressApi = require("./blockcypherAddressApi.js");
 
+// @todo: plugin API for Bitgesell here
 function getSupportedAddressApis() {
 	return ["blockchain.com", "blockchair.com", "blockcypher.com", "electrum", "electrumx"];
 }

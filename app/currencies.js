@@ -7,6 +7,14 @@ global.currencyTypes = {
 		default:true,
 		decimalPlaces:8
 	},
+	"bgl": {
+		id: "bgl",
+		type:"native",
+		name:"BGL",
+		multiplier:1,
+		default:true,
+		decimalPlaces:8
+	},
 	"sat": {
 		id: "sat",
 		type:"native",
