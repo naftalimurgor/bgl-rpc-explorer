@@ -2,7 +2,7 @@ extends layout
 
 block headContent
 	title Transaction Stats
-	
+
 block content
 	+pageTitle("Transaction Stats")
 
@@ -121,7 +121,7 @@ block content
 							h6.text-card-highlight.fw-light.mb-3
 								span.text-uppercase Last ~30 Days
 								span.small.ms-2 (#{new Decimal(txStatsMonth.avgTimespan).dividedBy(60).dividedBy(60).toDP(1)} hr/pt)
-								
+
 						script var txRateDataMonth = [];
 						each item, index in txStatsMonth.txRates
 							script txRateDataMonth.push({x:#{item.x}, y:#{item.y}});

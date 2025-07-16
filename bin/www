@@ -13,6 +13,11 @@ debug(`Set max_old_space_size to ${maxOldSpaceSize} MB`);
 app.set('port', process.env.PORT || process.env.BTCEXP_PORT || 3002);
 app.set('host', process.env.BTCEXP_HOST || '127.0.0.1');
 
+process.on('unhandledRejection', (reason, promise) => {
+	console.error('Unhandled Rejection:', reason);
+	// optionally log the promise stack
+});
+
 const server = app.listen(app.get('port'), app.get('host'), () => {
 	debug('Express server starting on ' + server.address().address + ':' + server.address().port);
 

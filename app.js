@@ -287,7 +287,7 @@ if (rateLimitWindowMinutes == -1) {
 	});
 
 	// Apply the rate limiting middleware to all requests.
-	expressApp.use(rateLimiter);
+	// expressApp.use(rateLimiter);
 }
 
 
