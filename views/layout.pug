@@ -9,7 +9,7 @@ html(lang="en")
 		meta(name="csrf-token", content=csrfToken)
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no")
 
-		meta(name="description" content="Open-source, easy-to-use, educational Bitcoin explorer whose only dependency is your Bitcoin Core node.")
+		meta(name="description" content="Open-source, easy-to-use, educational Bitgesell explorer whose only dependency is your Bitgesell Core node.")
 		
 		if (!homepage)
 			link(rel="stylesheet", href=assetUrl(`./style/highlight.min.css`), integrity=assetIntegrity("highlight.min.css"), crossorigin="anonymous")
@@ -18,19 +18,19 @@ html(lang="en")
 		+themeCss
 		
 
-		link(id="canonical" rel="canonical" href="https://bitcoinexplorer.org")
+		//link(id="canonical" rel="canonical" href="https://bitcoinexplorer.org")
 
-		meta(property="og:title" content=(metaTitle != undefined ? metaTitle : "BitcoinExplorer.org - Open-Source Bitcoin Explorer"))
-		meta(property="og:description" content=(metaDesc != undefined ? metaDesc : "Open-source, easy-to-use, educational Bitcoin explorer whose only dependency is your Bitcoin Core node."))
-		meta(property="og:image" content="https://bitcoinexplorer.org/img/preview.png")
+		meta(property="og:title" content=(metaTitle != undefined ? metaTitle : "An Open-Source Bitgesell Explorer"))
+		meta(property="og:description" content=(metaDesc != undefined ? metaDesc : "Open-source, easy-to-use, educational Bitgesell explorer whose only dependency is your Bitgesell Core node."))
+		meta(property="og:image" content="http://http://198.96.88.103:3002//img/preview.png")
 
 		meta(property="twitter:card" content="summary_large_image")
-		meta(property="twitter:site" content="@BitcoinExplorer")
-		meta(property="twitter:creator" content="@BitcoinExplorer")
-		meta(property="twitter:title" content=(metaTitle != undefined ? metaTitle : "BitcoinExplorer.org"))
-		meta(property="twitter:description" content=(metaDesc != undefined ? metaDesc : "Open-source, easy-to-use, educational Bitcoin explorer whose only dependency is your Bitcoin Core node."))
-		meta(property="twitter:image:src" content=(metaImgUrl != undefined ? metaImgUrl : "https://bitcoinexplorer.org/img/preview.png"))
-		meta(property="twitter:domain" content="bitcoinexplorer.org")
+		//meta(property="twitter:site" content="@BitgesellExplorer")
+		//meta(property="twitter:creator" content="@BitgesellExplorer")
+		//meta(property="twitter:title" content=(metaTitle != undefined ? metaTitle : "BitgesellExplorer.org"))
+		meta(property="twitter:description" content=(metaDesc != undefined ? metaDesc : "Open-source, easy-to-use, educational Bitgesell explorer whose only dependency is your Bitgesell Core node."))
+		meta(property="twitter:image:src" content=(metaImgUrl != undefined ? metaImgUrl : "https://http://198.96.88.103:3002/img/preview.png"))
+		//meta(property="twitter:domain" content="Bitgesellexplorer.org")
 
 		- var network = global.activeBlockchain || "main";
 		if (!network.endsWith("net") && network != "regtest")
@@ -258,15 +258,15 @@ html(lang="en")
 							h6 Project
 
 							.ms-2
-								a.footer-link(href="https://github.com/janoside/btc-rpc-explorer") github.com/janoside/btc-rpc-explorer
+								a.footer-link(href="https://github.com/naftalimurgor/bgl-rpc-explorer") github.com/naftalimurgor/bgl-rpc-explorer
 									
 								if (global.sourcecodeProjectMetadata)
 									div.mt-2
-										a.btn.btn-primary.btn-sm.me-3.mb-1.text-decoration-none(href="https://github.com/janoside/btc-rpc-explorer")
+										a.btn.btn-primary.btn-sm.me-3.mb-1.text-decoration-none(href="https://github.com/naftalimurgor/bgl-rpc-explorer")
 											i.bi-star-fill.text-warning.me-2
 											span.badge.bg-white.text-dark #{global.sourcecodeProjectMetadata.stargazers_count}
 
-										a.btn.btn-primary.btn-sm.me-3.mb-1.text-decoration-none(href="https://github.com/janoside/btc-rpc-explorer/fork")
+										a.btn.btn-primary.btn-sm.me-3.mb-1.text-decoration-none(href="https://github.com/naftlimurgor/bgl-rpc-explorer/fork")
 											i.bi-bezier2.me-2
 											span.badge.bg-white.text-dark #{global.sourcecodeProjectMetadata.forks_count}
 
@@ -279,7 +279,7 @@ html(lang="en")
 								if (sourcecodeVersion)
 									br
 									span commit: 
-										a.footer-link(href=`https://github.com/janoside/btc-rpc-explorer/commit/${sourcecodeVersion}`) #{sourcecodeVersion}
+										a.footer-link(href=`https://github.com/naftalimurgor/bgl-rpc-explorer/commit/${sourcecodeVersion}`) #{sourcecodeVersion}
 								
 								br
 								span released: #{sourcecodeDate}
