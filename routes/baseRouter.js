@@ -154,7 +154,12 @@ router.get("/", asyncHandler(async (req, res, next) => {
 			const latestBlocks = await coreApi.getBlocksByHeight(blockHeights);
 			
 			res.locals.latestBlocks = latestBlocks;
-			res.locals.blocksUntilDifficultyAdjustment = ((res.locals.difficultyPeriod + 1) * coinConfig.difficultyAdjustmentBlockCount) - latestBlocks[0].height;
+			if (latestBlocks.length === 0) {
+				res.locals.blocksUntilDifficultyAdjustment = null; // or a fallback value like 0
+			} else {
+				res.locals.blocksUntilDifficultyAdjustment = ((res.locals.difficultyPeriod + 1) * coinConfig.difficultyAdjustmentBlockCount) - latestBlocks[0].height;
+			}
+
 		}));
 
 		

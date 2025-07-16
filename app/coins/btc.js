@@ -103,7 +103,7 @@ module.exports = {
 		"https://raw.githubusercontent.com/blockchain/Blockchain-Known-Pools/master/pools.json"
 	],
 	maxBlockWeight: 4000000,
-	maxBlockSize: 1000000,
+	maxBlockSize: 400000,
 	minTxBytes: 166, // ref: https://en.bitcoin.it/wiki/Maximum_transaction_rate
 	minTxWeight: 166 * 4, // hack
 	difficultyAdjustmentBlockCount: 2016,

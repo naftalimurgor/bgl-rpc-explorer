@@ -334,7 +334,8 @@ async function getNextBlockEstimate() {
 
 	let parentTxIndexes = new Set();
 	let templateWeight = 0;
-	blockTemplate.transactions.forEach(tx => {
+	const transactions = blockTemplate?.transactions || [];
+	transactions.forEach(tx => {
 		templateWeight += tx.weight;
 
 		if (tx.depends && tx.depends.length > 0) {
@@ -346,7 +347,8 @@ async function getNextBlockEstimate() {
 
 	let txIndex = 1;
 	let feeRates = [];
-	blockTemplate.transactions.forEach(tx => {
+
+	transactions.forEach(tx => {
 		let feeRate = tx.fee / tx.weight * 4;
 		if (tx.depends && tx.depends.length > 0) {
 			let totalFee = tx.fee;
@@ -398,7 +400,7 @@ async function getNextBlockEstimate() {
 	}
 
 	let txIncluded = 0;
-	blockTemplate.transactions.forEach(tx => {
+	transactions.forEach(tx => {
 		let feeRate = tx.avgFeeRate ? tx.avgFeeRate : (tx.fee / tx.weight * 4);
 
 		for (let i = 0; i < feeRateGroups.length; i++) {
@@ -417,9 +419,11 @@ async function getNextBlockEstimate() {
 		}
 	});
 
+	const weightLimit = blockTemplate?.weightlimit || 4000000; // 4MB default block weight
 	feeRateGroups.forEach(group => {
-		group.weightRatio = group.totalWeight / blockTemplate.weightlimit;
+		group.weightRatio = group.totalWeight / weightLimit;
 	});
+
 
 
 

@@ -22,15 +22,8 @@
 					th.text-end.text-card-highlight.fw-normal.text-uppercase.d-none.d-lg-table-cell
 						span.border-dotted(title="The total output of all transactions in each block.", data-bs-toggle="tooltip") Volume
 
-				if (blockstatsByHeight)
-					th.text-end.text-card-highlight.fw-normal.text-uppercase.d-none.d-md-table-cell
-						span.border-dotted(title="The min/avg/max fee rates (sat/vB) for transactions in this block.", data-bs-toggle="tooltip") Fee Rates
-				else
-					th.text-end.text-card-highlight.fw-normal.text-uppercase
-						span.border-dotted(title="The average fee (sat/vB) for all block transactions.", data-bs-toggle="tooltip") Avg Fee
 
-
-				th.text-end.text-card-highlight.fw-normal.text-uppercase.d-none.d-lg-table-cell Σ Fees
+				//th.text-end.text-card-highlight.fw-normal.text-uppercase.d-none.d-lg-table-cell Σ Fees
 				
 				//th.text-end Size (kB)
 
@@ -157,7 +150,7 @@
 						if (blockstatsByHeight)
 							td.text-end.d-none.d-lg-table-cell
 								if (blockstatsByHeight[block.height])
-									- var satValue = new Decimal(blockstatsByHeight[block.height].total_out).plus(blockstatsByHeight[block.height].subsidy).plus(blockstatsByHeight[block.height].totalfee);
+									- var satValue = new Decimal(blockstatsByHeight[block.height].total_out).plus(blockstatsByHeight[block.height].subsidy);
 									- var currencyValue = parseInt(satValue.dividedBy(coinConfig.baseCurrencyUnit.multiplier));
 									- var currencyValueDecimals = 0;
 
